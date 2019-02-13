@@ -5,9 +5,10 @@ import 'dart:convert';
 
 const baseUrl = "https://opentdb.com/api.php?amount=10";
 
-Future _loadAddressAsset() async {
+Future <String>_loadAddressAsset() async {
   var url = baseUrl;
-  return http.get(url);
+  String respuesta = http.get(url) as String;
+  return respuesta;
 }
 
 Future loadAddress() async {
